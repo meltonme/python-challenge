@@ -91,9 +91,6 @@ print("--------------------")
 
 
 #create a text file for the official results data
-#results_file =os.path.join("PyPoll/Analysis/Elections_Results.txt")
-#print the offical results data in the new text file
-#with open (results_file, "w") as textfile:
 filename = "ElectionResults.txt"
 outfile = open(filename, 'w')
 outfile.write("Election Results")
