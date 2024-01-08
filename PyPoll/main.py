@@ -6,7 +6,7 @@ import os
 import csv
 
 #set the path for csv file 
-poll_data = os.path.join("Resources/election_data.csv")
+poll_data = "Resources/election_data.csv"
 
 # set up and define variables 
 votes_counter = 0
@@ -63,8 +63,6 @@ if winner == sum_candidate_two:
 if winner == sum_candidate_three:
     winner = candidate_three
 
-#printing the winner to make sure it worked
-#print(winner)
 
 #print the offical data 
 print("Election Results")
