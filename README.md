@@ -16,7 +16,7 @@ For the Financial Analysis (PyBank), I was able to write script to calculate and
       - The greatest profit increase over the entire period
       - The greatest profit decrease over the entire period 
 
-**Election Results/PyPoll **
+**Election Results/PyPoll**
 
 For the Election Results(PyPoll), I was able to write a script to calculate and produce the following information: 
       - Total number of votes
