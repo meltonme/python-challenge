@@ -1,11 +1,12 @@
+
 #import os module
 import os 
 
 #import csv
 import csv
 
-#set path for csv file 
-poll_data = r"\Users\mahan\Downloads\Starter_Code_Mod3_Challenge\Starter_Code\PyPoll\Resources\election_data.csv"
+#set the path for csv file 
+poll_data = os.path.join("Resources/election_data.csv")
 
 # set up and define variables 
 votes_counter = 0
@@ -22,12 +23,11 @@ per_candidate_three = 0
 winner = 0
 
 # Read the csv and convert it into a list of dictionaries
-with open(poll_data) as election_data:
-    reader = csv.reader(election_data, delimiter= ",")
+with open(poll_data) as data:
+    reader = csv.reader(data, delimiter= ",")
     # skip the header
     header = next(reader)
-    #printing the headers to make sure it's pulling from the document correctly
-    #print(header)
+
 
 #looping through all of the rows 
     for row in reader:
@@ -53,15 +53,6 @@ per_candidate_three = (sum_candidate_three/votes_counter)*100
 format_per_candidate_one = round(per_candidate_one,3)
 format_per_candidate_two = round(per_candidate_two,3)
 format_per_candidate_three = round(per_candidate_three,3)
-
-#keeping these open to check if the code is working
-#print(sum_candidate_one)
-#print(sum_candidate_two)
-#print(sum_candidate_three)
-
-#print(format_per_candidate_one)
-#print(format_per_candidate_two)
-#print(format_per_candidate_three)
 
 #determine the winner
 winner = max(sum_candidate_one,sum_candidate_two,sum_candidate_three)
